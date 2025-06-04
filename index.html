@@ -8,6 +8,9 @@
 </head>
 <body class="bg-white text-gray-900 font-sans">
 
+  <!-- Site Header -->
+  <div id="site-header"></div>
+
   <!-- Hero Section -->
   <section class="bg-[url('https://images.unsplash.com/photo-1600585154084-8a268a95a3ba')] bg-cover bg-center text-white min-h-screen flex flex-col justify-center items-center text-center px-4">
     <h1 class="text-4xl sm:text-6xl font-bold mb-4">CRAFTED BY HAND.<br>BUILT TO LAST.</h1>
@@ -45,6 +48,22 @@
     <h2 class="text-2xl sm:text-3xl font-semibold mb-4">Ready to build your dream kitchen?</h2>
     <a href="#contact" class="bg-black text-white px-6 py-3 rounded font-medium hover:bg-gray-800 transition">Contact Us</a>
   </section>
+
+  <!-- Site Footer -->
+  <div id="site-footer"></div>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('site-header').innerHTML = html;
+      });
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('site-footer').innerHTML = html;
+      });
+  </script>
 
 </body>
 </html>
