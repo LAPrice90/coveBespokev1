@@ -392,3 +392,43 @@ footer {
     max-width: 80px;
   }
 }
+
+.cta-projects {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+              url('images/cta-banner.png') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.cta-projects p {
+  font-size: 1rem;
+  color: #c8c3b8;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #c8c3b8;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #fff;
+}
