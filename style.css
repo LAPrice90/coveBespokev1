@@ -1,0 +1,81 @@
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0; /* Removed horizontal padding on the body */
+  font-family: sans-serif;
+  box-sizing: border-box; /* ensures padding is included in the width calculation */
+}
+
+header {
+  background-color: transparent;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center; /* Centers inline content inside header */
+}
+
+header > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+header .logo img {
+  height: auto;
+  max-height: 150px;
+  width: auto;
+}
+
+header nav a {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  transition: color 0.3s;
+  color: #c8c3b8;
+  text-decoration: none;
+}
+
+header nav a + a {
+  margin-left: 2.5rem;
+}
+
+header nav a:hover {
+  color: #fff;
+}
+
+.hero-section {
+  width: 100%;
+  padding: 0 5rem;  /* 2rem padding on the left and right */
+  box-sizing: border-box;
+  margin-top: 1rem;  /* matches the gap between logo and nav */
+}
+
+.image-row {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;      /* Changed from max-width: 1600px to full container width */
+  margin: 0 auto;
+}
+
+.image-row img {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+
+.container {
+  padding: 0 150px; /* This container keeps your content 150px from the sides on larger screens */
+  max-width: 1400px; /* Optionally, add a max-width so that on very large screens your content doesn't stretch too far */
+  margin: 0 auto;
+}

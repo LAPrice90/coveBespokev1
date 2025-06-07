@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cove Bespoke</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="header"></div>
+  </div>
+
+  <div class="hero-section">
+    <div class="image-row">
+      <img src="images/hero1.png" alt="Hero Image 1" />
+      <img src="images/hero2.png" alt="Hero Image 2" />
+      <img src="images/hero3.png" alt="Hero Image 3" />
+    </div>
+  </div>
+
+  <script>
+    fetch('header.html?cb=' + new Date().getTime())
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header').innerHTML = html;
+      })
+      .catch(err => console.error('Failed to load header:', err));
+  </script>
+</body>
+
+</html>
