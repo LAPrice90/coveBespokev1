@@ -18,6 +18,9 @@
       <img src="images/hero3.png" alt="Hero Image 3" />
     </div>
   </div>
+  
+  <!-- Footer placeholder -->
+  <div id="footer"></div>
 
   <script>
     fetch('header.html?cb=' + new Date().getTime())
@@ -27,7 +30,18 @@
       })
       .catch(err => console.error('Failed to load header:', err));
   </script>
+  
   <!-- Load your main.js after the header is inserted -->
   <script src="main.js"></script>
+  
+  <!-- Fetch and insert the footer -->
+  <script>
+    fetch('footer.html?cb=' + new Date().getTime())
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+      })
+      .catch(err => console.error('Failed to load footer:', err));
+  </script>
 </body>
 </html>
