@@ -79,8 +79,9 @@ header nav a:hover {
 .hero-section {
   width: 100%;
   padding: 0 5rem;  /* 2rem padding on the left and right */
-  box-sizing: border-box;
   margin-top: 1rem;  /* matches the gap between logo and nav */
+  margin-bottom: 1rem; /* new gap below */
+  box-sizing: border-box;
 }
 
 /* Hero section mobile styling */
@@ -216,7 +217,7 @@ footer {
 .footer-col {
   flex: 1;
   min-width: 200px;
-  margin: 1rem 0;
+  margin: 0.75rem 0;  /* Reduced margin from 1rem for a tighter look */
   padding: 0 1rem;
 }
 
@@ -225,19 +226,22 @@ footer {
   height: auto;
 }
 
-.footer-nav nav a {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #c8c3b8;
+/* Uniform Footer Navigation & Contact Links */
+.footer-nav nav a,
+.footer-contact a {
+  display: block;              /* Force each link onto its own line */
+  margin-bottom: 0.5rem;         /* Consistent vertical spacing */
   text-transform: uppercase;
-  text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.8rem;             /* Uniform font size */
   font-weight: 750;
   letter-spacing: 0.05em;
   transition: color 0.3s;
+  color: #c8c3b8;
+  text-decoration: none;
 }
 
-.footer-nav nav a:hover {
+.footer-nav nav a:hover,
+.footer-contact a:hover {
   color: #fff;
 }
 
@@ -304,4 +308,74 @@ footer {
     padding: 0.5rem;  /* Adjust padding if needed */
     width: 100%;
   }
+}
+
+/* Brand Section Styles */
+.brand-section {
+  background-color: #1A1A1A;
+  color: #D8D2C6; /* Updated text color */
+  padding: 4rem 1rem;
+}
+
+.brand-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Typography Upgrade for the Brand Section */
+
+/* Use a refined serif font for the headline */
+.brand-section h2 {
+  font-family: 'Playfair Display', serif; /* or use 'Cormorant Garamond', serif; */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* Update the subhead and body copy within the brand section */
+.brand-container,
+.brand-subhead,
+.brand-card p {
+  font-family: sans-serif;
+  font-weight: 300; /* Soft weight */
+  color: #EAE7E2;  /* Ivory colour */
+}
+
+/* Widen spacing between the 3 content blocks */
+.brand-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;  /* Increased gap for more breathing room */
+  flex-wrap: wrap;
+}
+
+/* Modify each card to restrict line length */
+.brand-card {
+  background: transparent;
+  flex: 1;
+  min-width: 250px;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 2rem 1rem;  /* More padding for a boutique feel */
+  text-align: center;
+}
+
+/* Use lighter font weight or small caps for headings like "KITCHENS" */
+.brand-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem;
+  font-weight: 500; /* Lighter than before */
+  /* Optionally, use small-caps instead of pure uppercase:
+     font-variant: small-caps; */
+  text-transform: uppercase;
+}
+
+/* Reduce line length for body copy */
+.brand-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 60ch; /* Limits line length to approx. 60 characters */
+  margin-left: auto;
+  margin-right: auto;
 }
