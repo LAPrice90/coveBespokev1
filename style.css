@@ -20,16 +20,42 @@ header > div {
   align-items: center;
 }
 
+/* Make the header container position relative for absolute positioning */
+@media (max-width: 768px) {
+  header {
+    position: relative;
+  }
+  header > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 header .logo {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
 }
 
+/* Center the logo and remove extra spacing if needed */
+@media (max-width: 768px) {
+  header .logo {
+    margin-bottom: 0;
+  }
+}
+
 header .logo img {
   height: auto;
   max-height: 150px;
   width: auto;
+}
+
+/* Shrink the logo for mobile */
+@media (max-width: 768px) {
+  header .logo img {
+    max-height: 100px;  /* Adjust as needed */
+  }
 }
 
 header nav a {
@@ -57,6 +83,14 @@ header nav a:hover {
   margin-top: 1rem;  /* matches the gap between logo and nav */
 }
 
+/* Hero section mobile styling */
+@media (max-width: 768px) {
+  .hero-section {
+    /* Your hero-specific rules here */
+    padding: 0 2rem; /* use whatever padding you need */
+  }
+}
+
 .image-row {
   display: flex;
   gap: 1.5rem;
@@ -65,17 +99,102 @@ header nav a:hover {
 }
 
 .image-row img {
-  flex: 1;
-  width: 100%;
+  flex: 1 1 0%;   /* Allow images to evenly distribute and shrink */
+  width: 100%;    /* Force each image to fill its flex item */
+  max-width: 100%;
   height: auto;
   max-height: 80vh;
   object-fit: cover;
   border-radius: 0.5rem;
+  min-width: 0;   /* Ensure the image can shrink below its intrinsic size */
 }
 
+/* Hide mobile nav and mobile menu by default */
+.mobile-nav,
+.mobile-menu {
+  display: none;
+}
 
-.container {
-  padding: 0 150px; /* This container keeps your content 150px from the sides on larger screens */
-  max-width: 1400px; /* Optionally, add a max-width so that on very large screens your content doesn't stretch too far */
-  margin: 0 auto;
+/* On mobile screens, hide the desktop nav and show the hamburger */
+@media (max-width: 768px) {
+  /* Set the header as the relative container */
+  header {
+    position: relative;
+  }
+  
+  /* Position the mobile-nav relative to the header */
+  .mobile-nav {
+    display: block;
+    position: absolute;
+    left: 1rem;         /* Reduced left padding */
+    top: 50%;           /* Center vertically in the header */
+    transform: translateY(-50%);
+    z-index: 9999;
+  }
+  
+  /* Hamburger styling */
+  .hamburger-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #c8c3b8;     /* Use the same color as the nav links */
+  }
+  
+  /* Hide desktop nav on mobile */
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    position: absolute;
+    left: 3rem;         /* Increased left padding */
+    top: 50%;           /* Center vertically within header container */
+    transform: translateY(-50%);
+    z-index: 9999;
+  }
+  /* Initially hide the mobile menu */
+  .mobile-menu {
+    display: none;
+    position: absolute;  /* If you need absolute positioning */
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    background-color: #000;
+    padding: 1rem;
+    width: 90%;            /* Or use a fixed width and max-width */
+    max-width: 300px;
+    text-align: left;      /* Left-aligns the text inside the container */
+  }
+  /* When open, display the mobile menu */
+  .mobile-menu.open {
+    display: flex;
+  }
+  .mobile-menu a {
+    padding: 0.5rem 0;
+    /* Remove borders and default lines */
+    border: none;
+    /* Match the desktop nav typography and color */
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 750;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+    color: #c8c3b8;
+    text-decoration: none;
+  }
+  .mobile-menu a:hover {
+    color: #fff;
+  }
+  /* Stack hero images on mobile if needed */
+  .image-row {
+    flex-direction: column;
+  }
+  
+  /* Optionally, you can adjust the hamburger button size */
+  .hamburger-btn {
+    font-size: 2rem;   /* example: increase the icon size */
+    background: none;
+    border: none;
+    color: #c8c3b8;     /* Match the nav link color */
+  }
 }
