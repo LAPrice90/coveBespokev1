@@ -263,12 +263,6 @@ footer {
   color: #fff;
 }
 
-/* The 'GET IN TOUCH' button and contact info now inherit the above rules */
-.footer-contact-btn,
-.footer-contact-info {
-  /* Inherits from .footer-contact a */
-}
-
 /* Socials: force inline display */
 .footer-socials a {
   display: inline-block;
@@ -283,6 +277,15 @@ footer {
 }
 
 .footer-socials a:hover {
+  color: #fff;
+}
+
+.footer-socials a i {
+  color: #c8c3b8;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover i {
   color: #fff;
 }
 
