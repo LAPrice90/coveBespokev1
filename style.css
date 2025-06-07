@@ -46,8 +46,7 @@ header .logo {
 }
 
 header .logo img {
-  height: auto;
-  max-height: 120px;
+  max-height: 90px;
   width: auto;
 }
 
@@ -222,7 +221,7 @@ footer {
 }
 
 .footer-logo img {
-  max-width: 200px; /* increased from 150px */
+  max-width: 150px; /* reduced from 200px */
   height: auto;
 }
 
@@ -378,4 +377,18 @@ footer {
   max-width: 60ch; /* Limits line length to approx. 60 characters */
   margin-left: auto;
   margin-right: auto;
+}
+
+.brand-symbol {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 80px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .brand-symbol {
+    max-width: 80px;
+  }
 }
