@@ -231,7 +231,7 @@ footer {
   display: block;              /* Force each link onto its own line */
   margin-bottom: 0.5rem;         /* Consistent vertical spacing */
   text-transform: uppercase;
-  font-size: 0.8rem;             /* Uniform font size */
+  font-size: 0.7rem;             /* Reduced from 0.8rem */
   font-weight: 750;
   letter-spacing: 0.05em;
   transition: color 0.3s;
@@ -246,7 +246,7 @@ footer {
 
 .footer-contact h3 {
   margin-bottom: 0.5rem;
-  font-size: 1.0rem;
+  font-size: 0.7rem;
 }
 
 /* Remove duplicate/conflicting rules for .footer-contact a – use only this block */
@@ -254,7 +254,7 @@ footer {
   display: block; /* Force each link onto its own line */
   margin-bottom: 0.5rem; /* Adjusted vertical gap to match the center column */
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: 750;
   letter-spacing: 0.05em;
   transition: color 0.3s;
