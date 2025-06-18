@@ -60,7 +60,7 @@ header .logo img {
 header nav a {
   text-transform: uppercase;
   font-size: .8rem;
-  font-weight: 700;
+  font-weight: 350;
   letter-spacing: 0.05em;
   transition: color 0.3s;
   color: #c8c3b8;
@@ -182,7 +182,7 @@ header nav a:hover {
     color: #c8c3b8;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 350;
     letter-spacing: 0.05em;
     transition: color 0.3s;
   }
@@ -195,10 +195,10 @@ header nav a:hover {
   .mobile-menu a:last-of-type::after {
     content: "";
     display: block;
-    width: calc(100% - 100px);
+    width: 100%;
     height: 2px;
     background-color: #777;
-    margin: 2rem auto 0;
+    margin: 2rem 0 0;
   }
   /* Stack hero images on mobile if needed */
   .image-row {
