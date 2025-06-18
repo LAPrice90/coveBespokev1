@@ -64,6 +64,9 @@
   <!-- Footer placeholder remains outside -->
   <div id="footer"></div>
 
+  <!-- Load main.js before initializing the mobile navigation -->
+  <script src="main.js"></script>
+
   <script>
     fetch('header.html?cb=' + new Date().getTime())
       .then(res => res.text())
@@ -73,9 +76,6 @@
       })
       .catch(err => console.error('Failed to load header:', err));
   </script>
-
-  <!-- Load your main.js after the header is inserted -->
-  <script src="main.js"></script>
   
   <!-- Fetch and insert the footer -->
   <script>
