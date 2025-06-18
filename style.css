@@ -169,7 +169,7 @@ header nav a:hover {
     pointer-events: none;
     text-align: center;
     font-size: 1.6rem; /* double the original 0.8rem */
-    gap: 1rem; /* doubled spacing between links */
+    gap: 2rem; /* increased spacing between links */
   }
 
   .mobile-menu.open {
@@ -178,6 +178,7 @@ header nav a:hover {
   }
 
   .mobile-menu a {
+    display: block;
     color: #c8c3b8;
     text-decoration: none;
     text-transform: uppercase;
@@ -188,6 +189,16 @@ header nav a:hover {
 
   .mobile-menu a:hover {
     color: #fff;
+  }
+
+  /* Grey divider line below the last mobile link */
+  .mobile-menu a:last-of-type::after {
+    content: "";
+    display: block;
+    width: calc(100% - 100px);
+    height: 2px;
+    background-color: #777;
+    margin: 2rem auto 0;
   }
   /* Stack hero images on mobile if needed */
   .image-row {
