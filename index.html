@@ -69,10 +69,11 @@
       .then(res => res.text())
       .then(html => {
         document.getElementById('header').innerHTML = html;
+        initMobileNav();
       })
       .catch(err => console.error('Failed to load header:', err));
   </script>
-  
+
   <!-- Load your main.js after the header is inserted -->
   <script src="main.js"></script>
   

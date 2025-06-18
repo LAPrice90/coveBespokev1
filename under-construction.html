@@ -18,7 +18,10 @@
   <script>
     fetch('header.html')
       .then(res => res.text())
-      .then(html => { document.getElementById('header').innerHTML = html; })
+      .then(html => {
+        document.getElementById('header').innerHTML = html;
+        initMobileNav();
+      })
       .catch(err => console.error('Failed to load header:', err));
   </script>
   <script src="main.js"></script>
