@@ -19,6 +19,8 @@
     </p>
   </main>
   <div id="footer"></div>
+  <!-- Load main.js before initializing the mobile navigation -->
+  <script src="main.js"></script>
   <script>
     fetch('header.html')
       .then(res => res.text())
@@ -28,7 +30,6 @@
       })
       .catch(err => console.error('Failed to load header:', err));
   </script>
-  <script src="main.js"></script>
   <script>
     fetch('footer.html')
       .then(res => res.text())
