@@ -432,3 +432,18 @@ footer {
 .cta-button:hover {
   background-color: #fff;
 }
+
+/* Under Construction Page */
+.construction {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .construction {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
