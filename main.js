@@ -6,6 +6,13 @@ function initMobileNav() {
     hamburger.addEventListener('click', () => {
       mobileMenu.classList.toggle('open');
     });
+
+    const links = mobileMenu.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
+    });
   } else {
     console.error('Hamburger button or mobile menu not found.');
   }
