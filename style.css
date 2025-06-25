@@ -432,3 +432,172 @@ footer {
 .cta-button:hover {
   background-color: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ───────── OUR WORK PAGE ──────────────────────────────────────────── */
+.ourwork-hero{
+  padding:3rem 1rem 2rem;
+  text-align:center;
+}
+.ourwork-hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:2.5rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  margin:0;
+}
+.ourwork-sub{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;
+  letter-spacing:0.15em;
+  margin:0.75rem 0 1.5rem;
+  color:#c8c3b8;
+}
+.ourwork-divider{
+  width:3rem;
+  height:1px;
+  background:#d8b466;          /* gold */
+  border:0;
+  margin:0 auto;
+}
+
+/* Filter bar */
+.filter-bar{
+  background:#141414;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:1rem;
+  padding:1rem;
+}
+.filter-group,
+.filter-actions{
+  display:flex;
+  gap:1rem;
+}
+.filter-bar select,
+.filter-bar input[type="search"]{
+  background:transparent;
+  border:1px solid #c8c3b8;
+  color:#c8c3b8;
+  padding:0.5rem 2.5rem 0.5rem 0.75rem;
+  text-transform:uppercase;
+  font-size:0.75rem;
+  letter-spacing:0.05em;
+}
+.filter-bar select:hover,
+.filter-bar input[type="search"]:hover{
+  border-color:#d8b466;        /* gold hover */
+}
+
+/* Project grid */
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+  padding:3rem 1rem;
+}
+@media (max-width:1024px){
+  .project-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:600px){
+  .project-grid{grid-template-columns:1fr;}
+}
+.project-card{
+  position:relative;
+  overflow:hidden;
+}
+.project-card img{
+  width:100%;
+  display:block;
+}
+.project-card .overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  transition:opacity .4s ease;
+}
+.project-card:hover .overlay{opacity:1;}
+.overlay .title{
+  font-family:'Playfair Display',serif;
+  font-size:1.25rem;
+  margin-bottom:0.25rem;
+}
+.overlay .meta{
+  font-size:0.75rem;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+}
+
+/* Hide filter actions on tablet + mobile */
+@media (max-width: 1024px){
+  .filter-actions{
+    display:none;
+  }
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  color: #c8c3b8;
+  margin: 0.25rem 0 0;
+  line-height: 1.4;
+  font-family: sans-serif;
+}
+
+.project-info span {
+  display: none;
+}
+
+.project-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  margin: 0.5rem 0 0.25rem;
+  color: #fff;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.project-card h3,
+.project-card h3:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.arrow-icon {
+  text-align: right;
+  font-size: 1.25rem;
+  color: #fff;
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .arrow-icon {
+  transform: translateX(4px);
+}

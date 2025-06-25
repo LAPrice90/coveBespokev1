@@ -34,3 +34,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.project-card');
+  const selects = document.querySelectorAll('.filter-group select');
+
+  function filterCards() {
+    const filters = {};
+    selects.forEach(select => {
+      const val = select.value.toLowerCase();
+      if (val !== select.options[0].text.toLowerCase()) {
+        filters[select.options[0].text.toLowerCase()] = val;
+      }
+    });
+
+    cards.forEach(card => {
+      let show = true;
+      for (const key in filters) {
+        if (card.dataset[key] !== filters[key]) {
+          show = false;
+          break;
+        }
+      }
+      card.style.display = show ? 'block' : 'none';
+    });
+  }
+
+  selects.forEach(select => select.addEventListener('change', filterCards));
+});
