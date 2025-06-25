@@ -27,6 +27,7 @@
       .then(html => {
         document.getElementById('header').innerHTML = html;
         initMobileNav();
+        initStickyHeader();
       })
       .catch(err => console.error('Failed to load header:', err));
   </script>

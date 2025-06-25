@@ -38,6 +38,23 @@ function initMobileCarousel() {
   }
 }
 
+function initStickyHeader() {
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  function checkScroll() {
+    if (window.innerWidth <= 1024 && window.scrollY > 50) {
+      header.classList.add('shrink');
+    } else {
+      header.classList.remove('shrink');
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll);
+  window.addEventListener('resize', checkScroll);
+  checkScroll();
+}
+
 function initProjectFilters() {
   const cards = document.querySelectorAll('.project-card');
   const selects = document.querySelectorAll('.filter-group select');
@@ -73,4 +90,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initMobileCarousel();
   initProjectFilters();
+  initStickyHeader();
 });

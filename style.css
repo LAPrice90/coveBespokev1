@@ -247,6 +247,33 @@ header nav a:hover {
   }
 }
 
+/* Sticky header for mobile and tablet */
+@media (max-width: 1024px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #000;
+  }
+
+  header.shrink {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header.shrink .logo img {
+    max-height: 35px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  header.shrink .logo img {
+    max-height: 45px;
+  }
+}
+
 footer {
   background-color: #000;
   color: #fff;
