@@ -643,7 +643,8 @@ a:visited {
 
 .project-card:hover .arrow-icon {
   transform: translateX(4px);
-=======
+}
+
 /* Under Construction Page */
 .construction {
   max-width: 600px;
@@ -723,5 +724,4 @@ a:visited {
 .coming-soon .return-btn:hover {
   background-color: #C5A05D;
   color: #000;
->>>>>>> 1a0f2183f48d6eba25f24fdbcd344f1ee1c56c31
 }
