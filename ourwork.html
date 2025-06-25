@@ -17,9 +17,6 @@
       <div id="header"></div>
     </div>
   
-    <div class="main-content">
-    <div id="header"></div>
-
 
 
 
@@ -170,29 +167,23 @@
 
     </section>
 
-
-
-
-
-
-
-    <div id="footer"></div>
-    </div>
+  </div>
 
   <!-- Footer placeholder remains outside -->
   <div id="footer"></div>
 
+  <!-- Load scripts -->
+  <script src="main.js"></script>
   <script>
     fetch('header.html?cb=' + new Date().getTime())
       .then(res => res.text())
       .then(html => {
         document.getElementById('header').innerHTML = html;
+        initMobileNav();
+        initStickyHeader();
       })
       .catch(err => console.error('Failed to load header:', err));
   </script>
-  
-  <!-- Load your main.js after the header is inserted -->
-  <script src="main.js"></script>
   
   <!-- Fetch and insert the footer -->
   <script>
