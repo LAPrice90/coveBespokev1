@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-u+7EGAkzlMXw6s5d5IQ0CxyA1spWVZPP1A5hS+5BnHqA5zNRqM2LIOxp3E2DsvZ+F4B4+7VOE9RSd3TxPoq9dA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" />
+</head>
+<body>
+  <div id="header"></div>
+  <main class="construction">
+    <h1>Contact Us</h1>
+    <p>
+      Joel Price<br>
+      <a href="tel:+353852567638">0353 85 256 7638</a><br>
+      <a href="mailto:covebespoke@gmail.com">covebespoke@gmail.com</a>
+    </p>
+  </main>
+  <div id="footer"></div>
+  <!-- Load main.js before initializing the mobile navigation -->
+  <script src="main.js"></script>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header').innerHTML = html;
+        initMobileNav();
+      })
+      .catch(err => console.error('Failed to load header:', err));
+  </script>
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => { document.getElementById('footer').innerHTML = html; })
+      .catch(err => console.error('Failed to load footer:', err));
+  </script>
+</body>
+</html>

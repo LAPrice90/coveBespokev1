@@ -1,30 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Because the header is inserted via fetch, delay initialization slightly
-  setTimeout(() => {
-    const hamburger = document.getElementById('hamburger-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+function initMobileNav() {
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-    if (hamburger && mobileMenu) {
-      hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    const links = mobileMenu.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
       });
-    } else {
-      console.error('Hamburger button or mobile menu not found.');
-    }
-  }, 100); // 100 ms delay to ensure header HTML has loaded
+    });
+  } else {
+    console.error('Hamburger button or mobile menu not found.');
+  }
+}
 
-  // Only run carousel on mobile (optional)
+function initMobileCarousel() {
   if (window.innerWidth < 768) {
     const imageRow = document.querySelector('.image-row');
     if (imageRow) {
       const images = imageRow.querySelectorAll('img');
       if (images.length > 1) {
         let current = 0;
-        // Hide all images except the first one
         images.forEach((img, index) => {
           img.style.display = index === 0 ? 'block' : 'none';
         });
-        // Rotate images every 3 seconds
         setInterval(() => {
           images[current].style.display = 'none';
           current = (current + 1) % images.length;
@@ -33,25 +36,26 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   }
-});
+}
 
-document.addEventListener('DOMContentLoaded', function () {
+function initProjectFilters() {
   const cards = document.querySelectorAll('.project-card');
   const selects = document.querySelectorAll('.filter-group select');
 
   function filterCards() {
     const filters = {};
     selects.forEach(select => {
-      const val = select.value.toLowerCase();
-      if (val !== select.options[0].text.toLowerCase()) {
-        filters[select.options[0].text.toLowerCase()] = val;
+      const key = select.options[0].textContent.trim().toLowerCase();
+      const value = select.value.trim().toLowerCase();
+      if (value !== key) {
+        filters[key] = value;
       }
     });
 
     cards.forEach(card => {
       let show = true;
       for (const key in filters) {
-        if (card.dataset[key] !== filters[key]) {
+        if ((card.dataset[key] || '').toLowerCase() !== filters[key]) {
           show = false;
           break;
         }
@@ -60,5 +64,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  selects.forEach(select => select.addEventListener('change', filterCards));
+  selects.forEach(select => {
+    select.addEventListener('change', filterCards);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initMobileNav();
+  initMobileCarousel();
+  initProjectFilters();
 });

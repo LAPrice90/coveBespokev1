@@ -56,7 +56,7 @@
       <div class="cta-content">
         <h2>See Our Work</h2>
         <p>Explore our portfolio of handcrafted interiors, tailored to fit every space and style.</p>
-        <a href="portfolio.html" class="cta-button">View Projects</a>
+        <a href="under-construction.html" class="cta-button">View Projects</a>
       </div>
     </section>
   </div>
@@ -64,17 +64,18 @@
   <!-- Footer placeholder remains outside -->
   <div id="footer"></div>
 
+  <!-- Load main.js before initializing the mobile navigation -->
+  <script src="main.js"></script>
+
   <script>
     fetch('header.html?cb=' + new Date().getTime())
       .then(res => res.text())
       .then(html => {
         document.getElementById('header').innerHTML = html;
+        initMobileNav();
       })
       .catch(err => console.error('Failed to load header:', err));
   </script>
-  
-  <!-- Load your main.js after the header is inserted -->
-  <script src="main.js"></script>
   
   <!-- Fetch and insert the footer -->
   <script>
