@@ -1,0 +1,33 @@
+.hero-section {
+  width: 100%;
+  padding: 0 5rem;  /* 2rem padding on the left and right */
+  margin-top: 1rem;  /* matches the gap between logo and nav */
+  margin-bottom: 1rem; /* new gap below */
+  box-sizing: border-box;
+}
+
+/* Hero section mobile styling */
+@media (max-width: 768px) {
+  .hero-section {
+    /* Your hero-specific rules here */
+    padding: 0 2rem; /* use whatever padding you need */
+  }
+}
+
+.image-row {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;      /* Changed from max-width: 1600px to full container width */
+  margin: 0 auto;
+}
+
+.image-row img {
+  flex: 1 1 0%;   /* Allow images to evenly distribute and shrink */
+  width: 100%;    /* Force each image to fill its flex item */
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  min-width: 0;   /* Ensure the image can shrink below its intrinsic size */
+}
