@@ -1,0 +1,83 @@
+/* Brand Section Styles */
+.brand-section {
+  background-color: #1A1A1A;
+  color: #D8D2C6; /* Updated text color */
+  padding: 4rem 1rem;
+}
+
+.brand-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Typography Upgrade for the Brand Section */
+
+/* Use a refined serif font for the headline */
+.brand-section h2 {
+  font-family: 'Playfair Display', serif; /* or use 'Cormorant Garamond', serif; */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* Update the subhead and body copy within the brand section */
+.brand-container,
+.brand-subhead,
+.brand-card p {
+  font-family: sans-serif;
+  font-weight: 300; /* Soft weight */
+  color: #EAE7E2;  /* Ivory colour */
+}
+
+/* Widen spacing between the 3 content blocks */
+.brand-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;  /* Increased gap for more breathing room */
+  flex-wrap: wrap;
+}
+
+/* Modify each card to restrict line length */
+.brand-card {
+  background: transparent;
+  flex: 1;
+  min-width: 250px;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 2rem 1rem;  /* More padding for a boutique feel */
+  text-align: center;
+}
+
+/* Use lighter font weight or small caps for headings like "KITCHENS" */
+.brand-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem;
+  font-weight: 500; /* Lighter than before */
+  /* Optionally, use small-caps instead of pure uppercase:
+     font-variant: small-caps; */
+  text-transform: uppercase;
+}
+
+/* Reduce line length for body copy */
+.brand-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 60ch; /* Limits line length to approx. 60 characters */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brand-symbol {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 80px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .brand-symbol {
+    max-width: 80px;
+  }
+}

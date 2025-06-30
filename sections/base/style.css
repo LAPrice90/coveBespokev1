@@ -1,0 +1,14 @@
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0; /* Removed horizontal padding on the body */
+  font-family: sans-serif;
+  box-sizing: border-box; /* ensures padding is included in the width calculation */
+}
+
+a,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
