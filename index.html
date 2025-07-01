@@ -84,6 +84,7 @@
       .then(res => res.text())
       .then(html => {
         document.getElementById('footer').innerHTML = html;
+        initCookieBanner();
       })
       .catch(err => console.error('Failed to load footer:', err));
   </script>

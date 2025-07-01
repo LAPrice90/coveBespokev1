@@ -86,9 +86,27 @@ function initProjectFilters() {
   });
 }
 
+function initCookieBanner() {
+  const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+  const acceptBtn = banner.querySelector('.cookie-accept');
+  if (localStorage.getItem('cookieAccepted') === 'true') {
+    banner.style.display = 'none';
+  } else {
+    banner.style.display = 'flex';
+  }
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieAccepted', 'true');
+      banner.style.display = 'none';
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initMobileCarousel();
   initProjectFilters();
   initStickyHeader();
+  initCookieBanner();
 });
