@@ -2,7 +2,8 @@
 
 /* --- Base / mobile --------------------------------------- */
 .media-right {
-  padding: 100px 1.5rem;
+  /* Match vertical padding with other sections */
+  padding: 4rem 1.5rem;
 }
 
 .media-right__wrapper {
@@ -41,7 +42,7 @@
 /* --- Tablet (768–1023 px) -------------------------------- */
 @media (min-width: 768px) and (max-width: 1023px) {
   .media-right {
-    padding: 100px 3rem;        /* extra side space */
+    padding: 4rem 3rem;        /* extra side space */
   }
 
   .media-right__wrapper {
@@ -66,7 +67,7 @@
 /* --- Desktop (≥ 1024 px) --------------------------------- */
 @media (min-width: 1024px) {
   .media-right {
-    padding: 100px 4rem;
+    padding: 4rem 4rem;
   }
 
   .media-right__wrapper {
