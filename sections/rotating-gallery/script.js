@@ -122,10 +122,17 @@
     if (e.target === lightbox) lightbox.classList.remove('active');
   });
 
-  section.querySelectorAll('.rotating-gallery-swiper img').forEach(img => {
+  section.querySelectorAll('.rotating-gallery-swiper .swiper-slide').forEach(slide => {
+    const img = slide.querySelector('img');
+    if (!img) return;
     img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightbox.classList.add('active');
+      if (!slide.classList.contains('swiper-slide-active')) {
+        const idx = +slide.dataset.swiperSlideIndex;
+        gallerySwiper.slideToLoop(idx);
+      } else {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+      }
     });
   });
 })();
