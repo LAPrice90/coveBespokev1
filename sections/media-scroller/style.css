@@ -47,7 +47,7 @@
 
 .scroller-item h3 {
   font-family: var(--font-heading);
-  font-size: var(--heading-size);
+  font-size: 1.25rem;
   color: var(--color-blue);
   margin-bottom: 0.5rem;
 }
