@@ -23,6 +23,7 @@ h5,
 h6 {
   font-family: var(--heading-font);
   color: #fff;
+  margin-top: 0;
 }
 
 /* Base spacing for all sections */
