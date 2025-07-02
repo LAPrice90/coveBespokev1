@@ -12,7 +12,7 @@
   font-size:clamp(32px,6vw,72px);
   font-weight:400;
   letter-spacing:.08em;
-  color:#003b5c;
+  color:#fff;
   margin:0 0 60px;
 }
 
@@ -31,16 +31,16 @@
   letter-spacing:1px;
   padding:6px 32px;
   border-radius:40px;
-  border:2px solid #003b5c;
+  border:2px solid #EDEAE3;
   background:#000;
-  color:#003b5c;
+  color:#EDEAE3;
   cursor:pointer;
   transition:.3s;
 }
 .process-tabs .tab:hover,
 .process-tabs .tab.active{
-  background:#003b5c;
-  color:#fff;
+  background:#EDEAE3;
+  color:#000;
 }
 
 /* headline + body copy that swaps per tab */
@@ -75,7 +75,7 @@
 .rotating-gallery-process .swiper-button-prev::after,
 .rotating-gallery-process .swiper-button-next::after{
   font-size:18px;
-  color:#003b5c;
+  color:#fff;
 }
 @media (max-width:1024px){
   .rotating-gallery-process .swiper-button-prev,
