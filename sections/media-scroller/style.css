@@ -3,8 +3,8 @@
 /* Heading */
 .media-scroller .scroller-heading {
   font-family: var(--font-heading);
-  font-size: clamp(32px, 5vw, 60px);
-  color: var(--color-blue);
+  font-size: 2rem;
+  color: #fff;
   margin: 0 1.5rem 3rem;
   text-transform: uppercase;
   text-align: center;                 /* default centre */
