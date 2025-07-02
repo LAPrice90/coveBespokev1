@@ -105,5 +105,17 @@
   if (trackEl) buildPills(0);          /* initialise */
   setActive(0);
   updateScale();
+
+  /* --- slide click to center --- */
+  section.querySelectorAll('.rotating-gallery-swiper .swiper-slide').forEach(slide => {
+    const img = slide.querySelector('img');
+    if (!img) return;
+    img.addEventListener('click', () => {
+      if (!slide.classList.contains('swiper-slide-active')) {
+        const idx = +slide.dataset.swiperSlideIndex;
+        gallerySwiper.slideToLoop(idx);
+      }
+    });
+  });
 })();
 
