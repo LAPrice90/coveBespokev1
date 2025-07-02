@@ -1,7 +1,7 @@
 /* Brand Section Styles */
 .brand-section {
-  background-color: #1A1A1A;
-  color: #D8D2C6; /* Updated text color */
+  background-color: #000;
+  color: #EDEAE3;
   padding: 4rem 1rem;
 }
 
@@ -27,7 +27,7 @@
 .brand-card p {
   font-family: sans-serif;
   font-weight: 300; /* Soft weight */
-  color: #EAE7E2;  /* Ivory colour */
+  color: #EDEAE3;
 }
 
 /* Widen spacing between the 3 content blocks */
