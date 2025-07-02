@@ -2,6 +2,8 @@
   --heading-font: 'Playfair Display', serif;
   --heading-size: 2.5rem;
   --font-heading: var(--heading-font);
+  /* Uniform vertical spacing between page sections */
+  --section-spacing: 5rem;
 }
 
 body {
@@ -21,6 +23,11 @@ h5,
 h6 {
   font-family: var(--heading-font);
   color: #fff;
+}
+
+/* Base spacing for all sections */
+section {
+  margin-block: var(--section-spacing);
 }
 
 h1,
