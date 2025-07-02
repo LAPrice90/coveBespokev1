@@ -8,10 +8,10 @@
   if (!section) return;
 
   const pillsEl   = section.querySelector('.tabs-swiper');
-  const trackEl   = pillsEl.querySelector('.swiper-wrapper');
-  const originals = [...trackEl.querySelectorAll('.swiper-slide')];
+  const trackEl   = pillsEl?.querySelector('.swiper-wrapper');
+  const originals = trackEl ? [...trackEl.querySelectorAll('.swiper-slide')] : [];
   const texts     = [...section.querySelectorAll('.process-text')];
-  const total     = originals.length;
+  const total     = section.querySelectorAll('.rotating-gallery-swiper .swiper-slide').length;
   let activeIndex = 0;
 
   /* --- image carousel --- */
@@ -57,7 +57,7 @@
   /* --- helpers --- */
   function setActive(i) {
     activeIndex = i;
-    trackEl.querySelectorAll('.tab')
+    trackEl?.querySelectorAll('.tab')
            .forEach(btn => btn.classList.toggle('active', +btn.dataset.slide === i));
     texts.forEach(t => t.classList.toggle('active', +t.dataset.step === i));
   }
@@ -66,12 +66,13 @@
     tab.addEventListener('click', () => {
       const i = +tab.dataset.slide;
       gallerySwiper.slideToLoop(i);
-      buildPills(i);
+      if (trackEl) buildPills(i);
       setActive(i);
     });
   }
 
   function buildPills(center) {
+    if (!trackEl) return;
     trackEl.innerHTML = '';
     const visible = 20;
     const half    = Math.floor(visible / 2);
@@ -87,21 +88,21 @@
   function move(dir) {
     let next = dir === 'next' ? activeIndex + 1 : activeIndex - 1;
     next = (next + total) % total;
-    buildPills(next);
+    if (trackEl) buildPills(next);
     setActive(next);
   }
 
   /* --- bindings --- */
   gallerySwiper.on('slideChangeTransitionEnd', () => {
     const i = gallerySwiper.realIndex;
-    buildPills(i);
+    if (trackEl) buildPills(i);
     setActive(i);
   });
 
   section.querySelector('.swiper-button-next')?.addEventListener('click', () => move('next'));
   section.querySelector('.swiper-button-prev')?.addEventListener('click', () => move('prev'));
 
-  buildPills(0);          /* initialise */
+  if (trackEl) buildPills(0);          /* initialise */
   setActive(0);
   updateScale();
 })();
