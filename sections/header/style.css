@@ -1,5 +1,6 @@
 header {
-  background-color: transparent;
+  /* Ensure header background remains black across all pages */
+  background-color: #000;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   text-align: center; /* Centers inline content inside header */
