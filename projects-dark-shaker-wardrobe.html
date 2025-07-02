@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cove Bespoke</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-u+7EGAkzlMXw6s5d5IQ0CxyA1spWVZPP1A5hS+5BnHqA5zNRqM2LIOxp3E2DsvZ+F4B4+7VOE9RSd3TxPoq9dA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+<body>
+  <div class="main-content">
+    <div id="header"></div>
+
+    <section class="section rotating-gallery-process">
+      <h2 class="section-title">Dark Shaker Wardrobe</h2>
+      <div class="process-tabs-wrapper">
+        <div class="swiper-button-prev"></div>
+        <div class="tabs-swiper swiper process-tabs">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide"><button class="tab active" data-slide="0">1</button></div>
+              <div class="swiper-slide"><button class="tab" data-slide="1">2</button></div>
+              <div class="swiper-slide"><button class="tab" data-slide="2">3</button></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <div class="process-copy">
+          <p class="process-text active" data-step="0"></p>
+          <p class="process-text" data-step="1"></p>
+          <p class="process-text" data-step="2"></p>
+        </div>
+
+      <div class="swiper rotating-gallery-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="images/projects/dark-shaker-wardrobe/1.jpg" alt="Dark Shaker Wardrobe image 1"></div>
+          <div class="swiper-slide"><img src="images/projects/dark-shaker-wardrobe/2.jpg" alt="Dark Shaker Wardrobe image 2"></div>
+          <div class="swiper-slide"><img src="images/projects/dark-shaker-wardrobe/3.jpg" alt="Dark Shaker Wardrobe image 3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="sections/rotating-gallery/script.js"></script>
+  <script>
+    fetch('header.html?cb=' + new Date().getTime())
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header').innerHTML = html;
+        initMobileNav();
+        initStickyHeader();
+      })
+      .catch(err => console.error('Failed to load header:', err));
+  </script>
+  <script>
+    fetch('footer.html?cb=' + new Date().getTime())
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+        initCookieBanner();
+      })
+      .catch(err => console.error('Failed to load footer:', err));
+  </script>
+</body>
+</html>
