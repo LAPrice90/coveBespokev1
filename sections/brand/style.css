@@ -15,8 +15,7 @@
 
 /* Use a refined serif font for the headline */
 .brand-section h2 {
-  font-family: 'Playfair Display', serif; /* or use 'Cormorant Garamond', serif; */
-  font-size: 2rem;
+  font-size: var(--heading-size);
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   color: #fff;

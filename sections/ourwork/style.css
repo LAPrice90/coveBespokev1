@@ -4,14 +4,12 @@
   text-align:center;
 }
 .ourwork-hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:2.5rem;
+  font-size: var(--heading-size);
   letter-spacing:0.2em;
   text-transform:uppercase;
   margin:0;
 }
 .ourwork-sub{
-  font-family:'Playfair Display',serif;
   font-size:1rem;
   letter-spacing:0.15em;
   margin:0.75rem 0 1.5rem;
