@@ -1,44 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-u+7EGAkzlMXw6s5d5IQ0CxyA1spWVZPP1A5hS+5BnHqA5zNRqM2LIOxp3E2DsvZ+F4B4+7VOE9RSd3TxPoq9dA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" />
-</head>
-<body>
-  <div id="header"></div>
-  <main class="construction">
-    <h1>Contact Us</h1>
-    <p>
-      Joel Price<br>
-      <a href="tel:0852567638">0852567638</a><br>
-      <a href="mailto:covebespoke@gmail.com">covebespoke@gmail.com</a>
-    </p>
-  </main>
-  <div id="footer"></div>
-  <!-- Load main.js before initializing the mobile navigation -->
-  <script src="main.js"></script>
-  <script>
-    fetch('header.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('header').innerHTML = html;
-        initMobileNav();
-        initStickyHeader();
-      })
-      .catch(err => console.error('Failed to load header:', err));
-  </script>
-  <script>
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer').innerHTML = html;
-        initCookieBanner();
-      })
-      .catch(err => console.error('Failed to load footer:', err));
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="sections/media-left/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-u+7EGAkzlMXw6s5d5IQ0CxyA1spWVZPP1A5hS+5BnHqA5zNRqM2LIOxp3E2DsvZ+F4B4+7VOE9RSd3TxPoq9dA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+    />
+    <style>
+      body.contact-page {
+        background-color: #fff;
+        color: #000;
+      }
+
+      body.contact-page h1,
+      body.contact-page h2,
+      body.contact-page h3,
+      body.contact-page h4,
+      body.contact-page h5,
+      body.contact-page h6 {
+        color: #000;
+      }
+    </style>
+  </head>
+  <body class="contact-page">
+    <div id="header"></div>
+    <section class="media-left">
+      <h1 class="media-left__heading">Contact Us</h1>
+      <div class="media-left__wrapper">
+        <figure class="media-left__image">
+          <img
+            src="images/projects/porcelain-kitchen/1.PNG"
+            alt="Porcelain kitchen"
+          />
+        </figure>
+        <div class="media-left__content">
+          <h2>
+            Let’s discuss your project and how we can bring your vision to life.
+          </h2>
+          <p>
+            Whether you’re planning a bespoke kitchen, tailored interior, or are
+            a professional looking to collaborate, we’d love to hear from you.
+            Reach out to arrange a consultation or discuss your project with our
+            team.
+          </p>
+          <p>
+            <strong>Joel Price</strong><br />
+            <a href="tel:0852567638">📞 0852567638</a><br />
+            <a href="mailto:covebespoke@gmail.com">✉️ covebespoke@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <div id="footer"></div>
+    <!-- Load main.js before initializing the mobile navigation -->
+    <script src="main.js"></script>
+    <script>
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("header").innerHTML = html;
+          initMobileNav();
+          initStickyHeader();
+        })
+        .catch((err) => console.error("Failed to load header:", err));
+    </script>
+    <script>
+      fetch("footer.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("footer").innerHTML = html;
+          initCookieBanner();
+        })
+        .catch((err) => console.error("Failed to load footer:", err));
+    </script>
+  </body>
 </html>
