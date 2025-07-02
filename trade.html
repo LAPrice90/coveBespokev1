@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Professionals | Cove Bespoke</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-u+7EGAkzlMXw6s5d5IQ0CxyA1spWVZPP1A5hS+5BnHqA5zNRqM2LIOxp3E2DsvZ+F4B4+7VOE9RSd3TxPoq9dA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" />
+</head>
+<body>
+  <div class="main-content">
+    <div class="container">
+      <div id="header"></div>
+    </div>
+
+    <div class="hero-section">
+      <div class="image-row">
+        <img src="images/projects/dark-porcelain-kitchen/1.JPG" alt="Trade hero image" />
+      </div>
+    </div>
+
+    <section class="intro-banner">
+      <div class="intro-banner__content">
+        <h1>For Professionals</h1>
+        <p class="trade-subtitle">Tailored cabinetry and joinery solutions for architects, designers, and developers.</p>
+        <div class="intro-banner__text-block">
+          <p>Are you an architect, interior designer, or developer seeking a cabinetry partner who understands precision, design intent, and seamless installation? Cove Bespoke works alongside professionals across Ireland and the UK, delivering high-quality joinery crafted for both private and commercial projects. From one-off feature kitchens to multi-unit developments, we help bring your vision to life.</p>
+          <ul>
+            <li>Trade Pricing – Competitive rates tailored to project scale and repeat collaboration.</li>
+            <li>Custom Solutions – Bespoke kitchens, wardrobes, custom furniture, and specialist joinery crafted to specification.</li>
+            <li>Material Expertise – Experience with Laminam porcelain, solid woods, and high-performance surfaces.</li>
+            <li>Collaborative Process – Seamless communication and respect for timelines and site requirements.</li>
+            <li>Full Installation Service – Professional installation ensuring a precise fit and finish.</li>
+            <li>Portfolio Access – View past trade projects to understand our craftsmanship and design flexibility.</li>
+          </ul>
+          <p>Whether you’re specifying a signature kitchen for a show home, outfitting multiple units, or working on a private client’s project, Cove Bespoke supports your vision with craftsmanship and reliability.</p>
+          <a href="mailto:covebespoke@gmail.com" class="return-btn">Enquire About Trade Partnership</a>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    fetch('header.html?cb=' + new Date().getTime())
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header').innerHTML = html;
+        initMobileNav();
+        initStickyHeader();
+      })
+      .catch(err => console.error('Failed to load header:', err));
+  </script>
+
+  <script>
+    fetch('footer.html?cb=' + new Date().getTime())
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+        initCookieBanner();
+      })
+      .catch(err => console.error('Failed to load footer:', err));
+  </script>
+</body>
+</html>
