@@ -1,10 +1,20 @@
 body {
   background-color: #000;
-  color: #fff;
+  color: #EDEAE3;
   margin: 0;
   padding: 0; /* Removed horizontal padding on the body */
   font-family: sans-serif;
   box-sizing: border-box; /* ensures padding is included in the width calculation */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
 }
 
 a,
