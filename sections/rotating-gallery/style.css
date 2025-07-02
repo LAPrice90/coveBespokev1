@@ -167,3 +167,29 @@
 .rotating-gallery-process .process-copy {
   padding: 0 1.5rem; /* match install section's side padding */
 }
+
+/* lightbox popup */
+.gallery-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+.gallery-lightbox.active {
+  display: flex;
+}
+.gallery-lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+.gallery-lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}

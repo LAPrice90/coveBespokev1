@@ -105,5 +105,28 @@
   if (trackEl) buildPills(0);          /* initialise */
   setActive(0);
   updateScale();
+
+  /* --- image lightbox --- */
+  let lightbox = document.querySelector('.gallery-lightbox');
+  if (!lightbox) {
+    lightbox = document.createElement('div');
+    lightbox.className = 'gallery-lightbox';
+    lightbox.innerHTML = '<span class="close">&times;</span><img src="" alt="">';
+    document.body.appendChild(lightbox);
+  }
+  const lightboxImg = lightbox.querySelector('img');
+  const closeBtn    = lightbox.querySelector('.close');
+
+  closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) lightbox.classList.remove('active');
+  });
+
+  section.querySelectorAll('.rotating-gallery-swiper img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    });
+  });
 })();
 
