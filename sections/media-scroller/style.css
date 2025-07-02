@@ -2,8 +2,8 @@
 
 /* Heading */
 .media-scroller .scroller-heading {
-  font-family: var(--font-heading);
-  font-size: 2rem;
+  font-family: var(--heading-font);
+  font-size: var(--heading-size);
   color: #fff;
   margin: 0 1.5rem 3rem;
   text-transform: uppercase;
