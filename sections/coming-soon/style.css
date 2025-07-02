@@ -17,17 +17,12 @@
 .coming-soon h1 {
   font-family: 'Playfair Display', serif; /* Use elegant serif for heading */
   text-transform: uppercase;
-  font-size: 1.75rem; /* slightly reduced for better balance */
+  font-size: var(--heading-size);
   letter-spacing: 0.2em;
   color: #EDEAE3;
   margin-bottom: 1rem;
 }
 
-@media (max-width: 600px) {
-  .coming-soon h1 {
-    font-size: 1.125rem; /* maintain proportion on small screens */
-  }
-}
 
 .coming-soon p {
   font-family: sans-serif;

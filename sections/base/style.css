@@ -1,6 +1,6 @@
 :root {
   --heading-font: 'Playfair Display', serif;
-  --heading-size: 2.5rem;
+  --heading-size: 7.5rem;
   --font-heading: var(--heading-font);
   /* Uniform vertical spacing between page sections */
   --section-spacing: 5rem;
@@ -31,7 +31,11 @@ section {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: var(--heading-size);
 }
 
