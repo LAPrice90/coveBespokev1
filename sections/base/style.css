@@ -40,3 +40,16 @@ a:visited {
   color: inherit;
   text-decoration: none;
 }
+
+/* Adjust heading size for smaller screens */
+@media (max-width: 768px) {
+  :root {
+    --heading-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --heading-size: 3rem;
+  }
+}
